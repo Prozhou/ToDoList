@@ -6,31 +6,21 @@ import {
 import FilterLink from '../containers/FilterLink'
 
 const Footer = () => (
- <View>
-    <Text>
-      Show:
-      {' '}
-    </Text>
+ <View style={{flexDirection:'row'}}>
     <FilterLink filter="SHOW_ALL">
-    <Text>
-      All
-    </Text>
+      <Text>
+        All
+      </Text>
     </FilterLink>
-    <Text>
-    {', '}
-    </Text>
     <FilterLink filter="SHOW_ACTIVE">
-    <Text>
-      Active
-    </Text>
+      <Text>
+        Active
+      </Text>
     </FilterLink>
-    <Text>
-    {', '}
-    </Text>
     <FilterLink filter="SHOW_COMPLETED">
-    <Text>
-    Completed
-    </Text>
+      <Text>
+      Completed
+      </Text>
     </FilterLink>
   </View>
 )

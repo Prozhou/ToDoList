@@ -2,12 +2,16 @@ import React from 'react'
 import {
     Text
 } from 'react-native'
+import { blue } from 'ansi-colors';
 
-const Todo = ({ onClick, completed, text }) => (
+const Todo = ({onClick, completed, text}) => (
     <Text
-        onPress={onclick}
+        onPress={onClick}
         style={{
-            textDecoration: completed ? 'line-through' : 'none'
+            textDecorationLine: completed ? 'line-through' : 'none',
+            color: 'blue',
+            width: 200,
+            height: 30,
         }}
     >
         {text}

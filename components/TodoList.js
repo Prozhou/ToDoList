@@ -6,10 +6,12 @@ import{
 import Todo from './Todo'
 
 
-const TodoList = ({ todos, onTodoClick }) => (
+const TodoList = ({ todos, toggleTodo }) => (
     <FlatList
+        style={{backgroundColor: 'red', width: 200, height: 300 }}
         data={todos}
-        renderItem={({item}) => <Todo key ={index} {...todo} onClick={() => onTodoClick(index)} />   
+        keyExtractor={(item) => item.id}
+        renderItem={({item}) => <Todo tag= 'haha' key = {item.id} {...item} onClick={() => toggleTodo(item.id)} />   
         }
     />
 )
